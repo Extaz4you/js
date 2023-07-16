@@ -15,89 +15,89 @@
     </div>
     <script src="scripts.js"></script>
     <script>
-        // // Task 1
-        // class Book{
-        //      title = "";
-        //      author = "";
-        //      pages = 0;
-        //      constructor(title, author, pages){
-        //         this.title = title;
-        //         this.author = author;
-        //         this.pages = pages;
-        //      }
-        //      ShowInfo() {
-        //         console.log(this.title, this.author, this.pages);
-        //      }
-        // }
-        //  book1 = new Book("123", "222", 123);
-        //  book1.ShowInfo();
+     // Task 1
+    //   class Employee{
+    //     name;
+    //     constructor(name){
+    //         this.name = name;
+    //     }
+    //     DisplayInfo(){
+    //         console.log(this.name);
+    //     }
 
-        //  //Task2
-        //  class Student {
-        //     name;
-        //     age;
-        //     grade;
-        //     constructor(name,age,grade){
-        //         this.name = name;
-        //         this.age = age;
-        //         this.grade = grade;
-        //     }
-        //     ShowInfo(){
-        //           console.log(`Имя: ${this.name}\nВозраст: ${this.age}\nКласс:  ${this.grade}`);
-                               
-                               
-        //     }
-        //  }
-        //  student1 = new Student("Nik", 13, 5);
-        //  student1.ShowInfo();
-            // Task 3
-            // class Bank{
-            //     name;
-            //     cliets = new Array();
-            //     constructor(name){
-            //         this.name = name;
-            //     }
-            //     addCliets(person){
-            //         this.cliets.push(person);
-            //     }
-            //     addedDeposit(person){
-            //         person.balance = 1000;
-            //     }
-            //     Deposit(person, number){
-            //             person.balance += number;
-            //     }
-            //     Withdraw(person, number){
-            //             if(person.balance<0 || person.balance < number){
-            //                 console.log("Operation impossible");
-            //             }
-            //             else{
-            //                 person.balance -= number;
-            //             }
-            //     }
-            //     ShowClients(){
-            //         for(client in this.cliets){
-            //             console.log(client);
-            //         }
-            //     }
-            // }
-            // class Person{
-            //     name;
-            //     age;
-            //     balance;
-            //     constructor(name,age){
-            //         this.name = name;
-            //         this.age = age;
-            //     }
-            // }
+    //   }
+    //   class Manager extends Employee{
+       
+    //     name;
+    //     department;
+    //     constructor(name, department){
+    //         super(name);
+    //         this.department = department;
+    //     }
+    //     DisplayInfo(){
+    //         console.log(this.name,this.department);
+    //   }
+    // }
+    //   employee = new Employee("Nick");
+    //   manager = new Manager("James", "Manager");
+    //   employee.DisplayInfo();
+    //   manager.DisplayInfo();
+    //Task 2
+    // class Product{
+    //     name;
+    //     price;
+    //     constructor(name, price){
+    //         this.name = name;
+    //         this.price = price;
+    //     }
+    // }
+    // class Order {
+    //     id;
+    //     products = [];
+    //     constructor(id){
+    //         this.id = id;
+    //     }
+    //     addProduct(product){
+    //         this.products.push(product);
+    //     }
 
-            // bank = new Bank("VTB");
-            // client = new Person("Nik", 15);
-            // bank.addCliets(client);
-            // bank.addedDeposit(client);
-            // bank.Deposit(client, 5000);
-            // bank.Withdraw(client, 2000);
-            // bank.ShowClients();
+    //     getTotalPrice(){
+    //         let sum = 0;
+    //         for(var i=0;i<this.products.length;i++){
+    //             sum += this.products[i].price;
+    //         }
+    //         console.log(sum);
+    //     }
+    // }
 
+    // product1 = new Product('Apple', 50);
+    // product2 = new Product('Potato', 100);
+    // order = new Order(1);
+    // order.addProduct(product1);
+    // order.addProduct(product2);
+    // console.log(order.products);
+    // order.getTotalPrice();
+
+    //Task 3
+
+    // class Student{
+    //     #name;
+    //     #age;
+    //     #averageGrade;
+    //     get Name() { return this.#name; }
+    //     set Name(name){ this.#name = name; }
+    //     get Age() { return this.#age; }
+    //     set Age(age){ this.#age = age; }
+    //     get AverageGrade() { return this.#averageGrade; }
+    //     set AverageGrade(averageGrade){ this.#averageGrade = averageGrade; }
+    //     ShowInfo(){
+    //         console.log(this._age, this._name, this._averageGrade);
+    //     }
+
+    // }
+
+    // student = new Student('Nik', 20, 4);
+    // console.log(student);
     </script>
 </body>
 </html>
