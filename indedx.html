@@ -6,98 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="level1">
-        <div class="level2">
-            <div class="level3">
-                <p class="final"></p>
-            </div>
-        </div>
-    </div>
+    <div class="user_list"></div>
     <script src="scripts.js"></script>
+    <script src="Data.js"></script>
     <script>
-     // Task 1
-    //   class Employee{
-    //     name;
-    //     constructor(name){
-    //         this.name = name;
-    //     }
-    //     DisplayInfo(){
-    //         console.log(this.name);
-    //     }
-
-    //   }
-    //   class Manager extends Employee{
-       
-    //     name;
-    //     department;
-    //     constructor(name, department){
-    //         super(name);
-    //         this.department = department;
-    //     }
-    //     DisplayInfo(){
-    //         console.log(this.name,this.department);
-    //   }
-    // }
-    //   employee = new Employee("Nick");
-    //   manager = new Manager("James", "Manager");
-    //   employee.DisplayInfo();
-    //   manager.DisplayInfo();
-    //Task 2
-    // class Product{
-    //     name;
-    //     price;
-    //     constructor(name, price){
-    //         this.name = name;
-    //         this.price = price;
-    //     }
-    // }
-    // class Order {
-    //     id;
-    //     products = [];
-    //     constructor(id){
-    //         this.id = id;
-    //     }
-    //     addProduct(product){
-    //         this.products.push(product);
-    //     }
-
-    //     getTotalPrice(){
-    //         let sum = 0;
-    //         for(var i=0;i<this.products.length;i++){
-    //             sum += this.products[i].price;
-    //         }
-    //         console.log(sum);
-    //     }
-    // }
-
-    // product1 = new Product('Apple', 50);
-    // product2 = new Product('Potato', 100);
-    // order = new Order(1);
-    // order.addProduct(product1);
-    // order.addProduct(product2);
-    // console.log(order.products);
-    // order.getTotalPrice();
-
-    //Task 3
-
-    // class Student{
-    //     #name;
-    //     #age;
-    //     #averageGrade;
-    //     get Name() { return this.#name; }
-    //     set Name(name){ this.#name = name; }
-    //     get Age() { return this.#age; }
-    //     set Age(age){ this.#age = age; }
-    //     get AverageGrade() { return this.#averageGrade; }
-    //     set AverageGrade(averageGrade){ this.#averageGrade = averageGrade; }
-    //     ShowInfo(){
-    //         console.log(this._age, this._name, this._averageGrade);
-    //     }
-
-    // }
-
-    // student = new Student('Nik', 20, 4);
-    // console.log(student);
+        const userList = document.querySelector(".user_list");
+        const parseToJson = JSON.stringify(localData);
+        const readFile = JSON.parse(parseToJson);
+        localStorage.clear();
+        readFile.forEach(i => {
+            localStorage.setItem(i.id, i.name);
+            let div = document.createElement("div");
+            div.textContent = i.name;
+            div.id = i.id;
+            userList.appendChild(div);
+        });
+        function DeleteUser(key) {
+            localStorage.removeItem(key);
+            let divForDelete = document.getElementById(key);
+            userList.removeChild(divForDelete);
+        }
+        DeleteUser(1);
     </script>
 </body>
 </html>
